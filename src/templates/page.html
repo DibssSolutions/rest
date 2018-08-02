@@ -4,24 +4,32 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{# variable example #}
-	<h1>{{title}}</h1>
 
-	
-	{# partial example #}
-	{% include "partials/_header.html" %}
+{% include "partials/_header.html" %}
+{% include "partials/_hero.html" %}
+{% include "partials/_features.html" %}
+{% include "partials/_catering.html" %}
+{% include "partials/_about.html" %}
+{% include "partials/_events.html" %}
+{% include "partials/_contacts.html" %}
+{% include "partials/_footer.html" %}
 
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
 
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
+{# <script>
+		(function() {
+		  /**
+		   * Video element
+		   * @type {HTMLElement}
+		   */
+		  var video = document.getElementById("my-video");
 		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
+		  /**
+		   * Check if video can play, and play it
+		   */
+		  video.addEventListener( "canplay", function() {
+			video.play();
+		  });
+		})();
+		</script> #}
 
 {% endblock %}

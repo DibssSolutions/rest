@@ -1,0 +1,43 @@
+.catering
+    margin-bottom: 95px
+    
+    &__options 
+        +clr
+   
+    &__column
+        float: left
+        width: calc( 50% - 15px )
+        display: flex
+        flex-flow: column
+        justify-content: space-around
+        height: 100%
+        +sm 
+            float: none
+            width: 100% 
+    
+    &__column:first-child
+        margin-right: 30px
+        
+    &__item
+        +cover
+        margin-bottom: 30px
+        position: relative
+    
+    &__text
+        position: absolute
+        &--hidden
+        opacity: 0
+        visibility: hidden
+        transform: scale(0.3)
+        +vcenter
+
+
+
+
+    .image
+        &-big 
+            padding-bottom: 70%
+        &-middle
+            padding-bottom: 60% 
+        &-small 
+            padding-bottom: 40%

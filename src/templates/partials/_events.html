@@ -1,0 +1,40 @@
+{% set images = [
+    {
+        "small": "1_small.jpg",
+        "big": "1_big.jpg"
+    },
+    {
+        "small": "2_small.jpg",
+        "big": "2_big.jpg"
+    },
+    {
+        "small": "3_small.jpg",
+        "big": "3_big.jpg"
+    },
+    {
+        "small": "4_small.jpg",
+        "big": "4_big.jpg"
+    },
+    {
+        "small": "5_small.jpg",
+        "big": "5_big.jpg"
+    },
+    {
+        "small": "6_small.jpg",
+        "big": "6_big.jpg"
+    }
+] %}
+
+<section class="events">
+    <div class="events__container container-inner">
+        <h3 class="events__title title">Фото с мероприятий</h3>
+        {% include "partials/_divider.html" %}
+        <div class="events__photos">
+            {% for img in images %}
+            <a href="img/foto_from_events/{{img.big}}" data-fancybox="images">
+                <img class="events__thumbnail" src="img/foto_from_events/{{img.small}}" />
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

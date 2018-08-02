@@ -1,0 +1,43 @@
+{% set features = [
+    {
+        "image": "debit-card",
+        "text": "Лучшие цены <br/> на кейтеринг"
+    },
+    {
+        "image": "menu",
+        "text": "Широкий ассортимент блюд"
+    },
+    {
+        "image": "dinner",
+        "text": "Организация кейтеринга под ключ"
+    },
+    {
+        "image": "chef",
+        "text": "Высокие стандарты обслуживания"
+    },
+    {
+        "image": "bill",
+        "text": "Оперативное составление расчета"
+    },
+    {
+        "image": "broccoli",
+        "text": "Только качественные продукты"
+    }
+] %}
+
+
+
+<section class="features">
+    <div class="container-inner features__container">
+        {% for item in  features %}
+        <div class="features__feature">
+            <div class="features__image">
+                {{mixins.icon(item.image)}}
+            </div>
+            <div class="features__text">
+                {{item.text | safe}}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

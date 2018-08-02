@@ -1,0 +1,35 @@
+// ===== CONTACTS FORM =====
+
+.order
+    text-align: center
+    margin: 45px auto 75px
+    &__label
+        display: inline-block
+        position: relative
+        border: solid 1px #999999
+        min-width: 250px
+        border-radius: 23px
+        text-align: center
+        &--center 
+            margin: 0 32px
+    &__input    
+        padding: 14px 0
+        font-size: 14px
+        font-weight: 300
+        line-height: 1.21
+        color: #666666
+        &:focus
+            color: red
+            &+.icon
+                display: none
+    &__submit
+        display: inline-block
+        padding: 14px 0
+        font-size: 16px
+        line-height: 1.31
+        color: #ffffff
+        background-color: $red
+        min-width: 250px
+        border-radius: 23px
+        text-align: center
+        text-transform: uppercase
