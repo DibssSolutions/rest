@@ -1,31 +1,45 @@
 .hero
     height: 100vh
-    position: relative
     min-height: 630px
     background-color: rgba($color: #2b2e26, $alpha: 0.5)
     &__video
         height: 100%
         width: 100%
-    &__text
+    &__container
         position: absolute
-        +vcenter
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        +vertical
+    &__text
+        display: inline-block
+        vertical-align: middle
         color: #ffffff
         text-align: center
-        max-width: 840px
-        min-width: 720px
+        max-width: 870px
+        min-width: 750px
+        padding: 150px 15px 150px
         +sm 
             max-width: 740px
             min-width: initial
+            margin: 0 auto
     &__title
         margin-bottom: 18px
         font-size: 35px
-        line-height: 0.94
+        line-height: 1
         text-transform: uppercase
         font-weight: 400
+        +md 
+            font-size: 28px
+        +sm 
+            font-size: 24px
     &__descr
         font-size: 25px
         font-weight: 300
         line-height: 1.32
+        +md 
+            font-size: 16px
     // &__form
     //     max-width: 780px
 

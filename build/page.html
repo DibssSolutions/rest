@@ -23,23 +23,28 @@
           </div>
           <nav class="nav" role="navigation">
             <ul class="nav__list">
-              <li class="nav__item"> <a class="nav__link" href="#events">Проведенные мероприятия</a> </li>
-              <li class="nav__item"> <a class="nav__link" href="#about">О компании</a> </li>
+              <li class="nav__item d-md-none"> <a class="nav__link" href="#events">Проведенные мероприятия</a> </li>
+              <li class="nav__item d-md-none"> <a class="nav__link" href="#about">О компании</a> </li>
               <li class="nav__item"> <span class="nav__phone">+7 (495) 131-17-26</span> </li>
             </ul>
-          </nav>
-        </div>
+          </nav> <a href="#" class="toggle-button js-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a> </div>
       </header>
       <div class="hero">
         <div class="hero__video js-video"> </div>
-        <div class="hero__container container-inner">
+        <div class="hero__container">
           <div class="hero__text">
+            <!-- TITLE -->
             <h2 class="hero__title">выездное обслуживание (кейтеринг)</h2>
+            <!-- DESCRIPTION -->
             <p class="hero__descr">Получите расчет кейтеринга прямо сейчас!</p>
+            <!-- FORM  -->
             <div class="hero__form">
               <form action="" class="calculate">
-                <div class="calculate__field"> <input type="text" class="calculate__input" placeholder="Введите Имя" /> <input type="text" class="calculate__input" placeholder="Введите телефон" /> <input type="number" class="calculate__input calculate__input--number" placeholder="Количество персон"
-                  /> </div>
+                <div class="calculate__field"> <input type="text" class="calculate__input" placeholder="Введите Имя" /> <input type="text" class="calculate__input" placeholder="Введите телефон" /> <input type="text" class="calculate__input" placeholder="Количество персон" /> </div>
                 <div class="calculate__button-wrapper"> <button type="submit" class="calculate__submit" value="Receive a result of calculation">Получить расчет кейтеринга</button> </div>
               </form>
             </div>
@@ -81,31 +86,37 @@
           <div class="catering__descr"> Компания Русский Мир организовывает кейтеринг и проводит мероприятия на самых различных лощадках. Мы подберем для вас самые креативные и концептуальные решения для вашего праздника </div>
           <div class="catering__options">
             <div class="catering__column">
-              <div class="catering__item image-big" style="background-image: url('img/foto_catering/11.jpg')">
-                <div class="catering__text catering__text--visible">Кейтеринг на природе</div>
-                <div class="catering__text catering__text--hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+              <div class="catering__item">
+                <div class="catering__image image-big" style="background-image: url('img/foto_catering/11.jpg')"></div>
+                <div class="catering__text-visible catering__text-visible--left-bottom">Кейтеринг на природе</div>
+                <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
               </div>
-              <div class="catering__item image-big" style="background-image: url('img/foto_catering/12.jpg')">
-                <div class="catering__text catering__text--visible">Кейтеринг в лофте</div>
-                <div class="catering__text catering__text--hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+              <div class="catering__item">
+                <div class="catering__image image-big" style="background-image: url('img/foto_catering/12.jpg')"></div>
+                <div class="catering__text-visible catering__text-visible--right-bottom">Кейтеринг в лофте</div>
+                <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
               </div>
-              <div class="catering__item image-small" style="background-image: url('img/foto_catering/8.jpg')">
-                <div class="catering__text catering__text--visible">Кейтеринг на празднике</div>
-                <div class="catering__text catering__text--hidden">Поможем в организации праздника и питания в любом удобном для вас месте. Креативные решения и индвидуальный подход!</div>
+              <div class="catering__item">
+                <div class="catering__image image-small" style="background-image: url('img/foto_catering/8.jpg')"></div>
+                <div class="catering__text-visible catering__text-visible--left-bottom">Кейтеринг на празднике</div>
+                <div class="catering__text-hidden">Поможем в организации праздника и питания в любом удобном для вас месте. Креативные решения и индвидуальный подход!</div>
               </div>
             </div>
             <div class="catering__column">
-              <div class="catering__item image-middle" style="background-image: url('img/foto_catering/9.jpg')">
-                <div class="catering__text catering__text--visible">Кейтеринг и фуршеты на яхте</div>
-                <div class="catering__text catering__text--hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+              <div class="catering__item">
+                <div class="catering__image image-middle" style="background-image: url('img/foto_catering/9.jpg')"></div>
+                <div class="catering__text-visible catering__text-visible--right-top">Кейтеринг и фуршеты на яхте</div>
+                <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
               </div>
-              <div class="catering__item image-middle" style="background-image: url('img/foto_catering/10.jpg')">
-                <div class="catering__text catering__text--visible">Кейтеринг на корабле</div>
-                <div class="catering__text catering__text--hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+              <div class="catering__item">
+                <div class="catering__image image-middle" style="background-image: url('img/foto_catering/10.jpg')"></div>
+                <div class="catering__text-visible catering__text-visible--right-bottom">Кейтеринг на корабле</div>
+                <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
               </div>
-              <div class="catering__item image-middle" style="background-image: url('img/foto_catering/13.jpg')">
-                <div class="catering__text catering__text--visible">Организация питания на борту самолета</div>
-                <div class="catering__text catering__text--hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+              <div class="catering__item">
+                <div class="catering__image image-middle" style="background-image: url('img/foto_catering/13.jpg')"></div>
+                <div class="catering__text-visible catering__text-visible--left-bottom">Организация питания на борту самолета</div>
+                <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
               </div>
             </div>
           </div>
@@ -163,7 +174,7 @@
           <div class="footer__logo">
             <a href="page.html" class="logo logo--vert">
               <div class="logo__img"> <img src="img/logo-dark.png" alt="main-logo" /> </div>
-              <h1 class="logo__text">Русский Мир</h1>
+              <h2 class="logo__text">Русский Мир</h2>
             </a>
           </div>
         </div>

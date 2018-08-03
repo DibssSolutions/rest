@@ -3,37 +3,43 @@
         "image": "11.jpg", 
         "text_visible": "Кейтеринг на природе", 
         "text_hidden": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.",
-        "height": "image-big"
+        "height": "image-big",
+        "text_position": "left-bottom"
     },
     {
         "image": "12.jpg", 
         "text_visible": "Кейтеринг в лофте", 
         "text_hidden": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.",
-        "height": "image-big"
+        "height": "image-big",
+        "text_position": "right-bottom"
     },
     {
         "image": "8.jpg", 
         "text_visible": "Кейтеринг на празднике", 
         "text_hidden": "Поможем в организации праздника и питания в любом удобном для вас месте. Креативные решения и индвидуальный подход!",
-        "height": "image-small"
+        "height": "image-small",
+        "text_position": "left-bottom"
     },
     {
         "image": "9.jpg", 
         "text_visible": "Кейтеринг и фуршеты на яхте", 
         "text_hidden": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.",
-        "height": "image-middle"
+        "height": "image-middle",
+        "text_position": "right-top"
     },
     {
         "image": "10.jpg", 
         "text_visible": "Кейтеринг на корабле", 
         "text_hidden": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.",
-        "height": "image-middle"
+        "height": "image-middle",
+        "text_position": "right-bottom"
     },
     {
         "image": "13.jpg", 
         "text_visible": "Организация питания на борту самолета", 
         "text_hidden": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.",
-        "height": "image-middle"
+        "height": "image-middle",
+        "text_position": "left-bottom"
     }
  ] %}
 
@@ -49,9 +55,10 @@
             {% for items in catering | slice(2) %}
             <div class="catering__column">
                 {% for item in items %}
-                <div class="catering__item {{item.height}}" style="background-image: url('img/foto_catering/{{item.image}}')">
-                    <div class="catering__text catering__text--visible">{{item.text_visible}}</div>
-                    <div class="catering__text catering__text--hidden">{{item.text_hidden}}</div>
+                <div class="catering__item">
+                    <div class="catering__image {{item.height}}" style="background-image: url('img/foto_catering/{{item.image}}')"></div> 
+                    <div class="catering__text-visible catering__text-visible--{{item.text_position}}">{{item.text_visible}}</div>
+                    <div class="catering__text-hidden">{{item.text_hidden}}</div>
                 </div>
                 {% endfor %}
             </div>

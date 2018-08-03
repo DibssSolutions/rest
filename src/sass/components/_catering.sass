@@ -1,6 +1,15 @@
 .catering
     margin-bottom: 95px
-    
+    &__descr
+        margin-bottom: 58px
+        font-size: 16px
+        font-weight: 300
+        line-height: 2
+        text-align: center
+        color: #090909
+        font-style: italic
+
+
     &__options 
         +clr
    
@@ -14,22 +23,68 @@
         +sm 
             float: none
             width: 100% 
+
     
     &__column:first-child
         margin-right: 30px
+        +sm 
+            margin-right: 0
         
     &__item
-        +cover
+        
         margin-bottom: 30px
         position: relative
-    
+        &:hover 
+            .catering__image 
+                opacity: 0.33
+                transition: opacity 0.5s
+            .catering__text-hidden
+                opacity: 1
+                visibility: visible
+                transition: opacity 0.5s ease-out, visibility 0.5s ease-out
+                transition-delay: 0.2s
+            .catering__text-visible
+                opacity: 0
+                visibility: hidden
+                transition: opacity 0.5s ease-out, visibility 0.5s ease-out
+    &__image 
+        +cover
+        transition: opacity 0.5s
     &__text
-        position: absolute
-        &--hidden
-        opacity: 0
-        visibility: hidden
-        transform: scale(0.3)
-        +vcenter
+        &-visible
+            position: absolute
+            background-color: #fff
+            padding: 8px 20px
+            font-size: 20px
+            font-weight: 300
+            line-height: 1
+            color: #333
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out
+            transition-delay: 0.2s
+            &--left-bottom
+                left: 0
+                bottom: 40px
+            &--left-top
+                left: 0
+                bottom: 40px
+            &--right-bottom
+                right: 0
+                bottom: 40px
+            &--right-top
+                right: 0
+                top: 40px
+        &-hidden
+            opacity: 0
+            visibility: hidden
+            +vcenter
+            font-size: 20px
+            line-height: 2.1
+            text-align: center
+            color: #000000
+            width: 100%
+            padding: 0 60px 0
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out
+            
 
 
 
@@ -41,3 +96,4 @@
             padding-bottom: 60% 
         &-small 
             padding-bottom: 40%
+
