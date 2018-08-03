@@ -5,23 +5,38 @@
     margin: 45px auto 75px
     &__label
         display: inline-block
-        position: relative
-        border: solid 1px #999999
         min-width: 250px
-        border-radius: 23px
+        margin: 16px 16px 0
         text-align: center
-        &--center 
-            margin: 0 32px
+        border: solid 1px $grey
+        border-radius: 23px
+        padding: 11px 23px
+    &__input-icon
+        margin-right: 10px
+        display: inline-block
+        .icon
+            font-size: 0.8em
+            color: $grey
     &__input    
-        padding: 14px 0
+        display: inline-block
         font-size: 14px
         font-weight: 300
         line-height: 1.21
         color: #666666
-        &:focus
-            color: red
-            &+.icon
-                display: none
+        +text-overflow
+        width: 45%
+        &--long 
+            width: 70%
+        //     &:focus
+        //         width: auto
+        // &:focus
+        //     width: auto
+        &::placeholder
+            font-size: inherit
+            font-weight:inherit
+            line-height: inherit
+            color: inherit
+    
     &__submit
         display: inline-block
         padding: 14px 0
@@ -33,3 +48,43 @@
         border-radius: 23px
         text-align: center
         text-transform: uppercase
+        margin: 16px 16px 0
+
+.calculate
+    &__field
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin: 60px -28px
+        text-align: center
+        +sm 
+            flex-flow: column
+    &__input
+        display: block
+        flex-grow: 1
+        background-color: transparent
+        font-size: 16px
+        font-weight: 300
+        line-height: 2.06
+        color: #ffffff
+        padding: 12px 0
+        border-bottom: 3px solid #fff
+        margin: 0 28px
+        &::placeholder
+            background-color: inherit
+            font-size: inherit
+            font-weight: inherit
+            line-height: inherit
+            color: inherit
+        &:focus
+            border-bottom: 3px solid #0f0
+    &__submit
+        display: inline-block
+        padding: 16px 96px 
+        font-size: 18px
+        line-height: 1.83
+        text-align: center
+        color: #ffffff
+        background-color: $red
+        text-transform: uppercase
+

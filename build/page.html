@@ -16,15 +16,15 @@
       <header class="header">
         <div class="container-inner header__container">
           <div class="header__logo">
-            <a href="#" class="logo">
+            <a href="page.html" class="logo">
               <div class="logo__img"> <img src="img/logo.png" alt="main-logo" /> </div>
               <h1 class="logo__text">Русский Мир</h1>
             </a>
           </div>
           <nav class="nav" role="navigation">
             <ul class="nav__list">
-              <li class="nav__item"> <a class="nav__link" href="#">Проведенные мероприятия</a> </li>
-              <li class="nav__item"> <a class="nav__link" href="#">О компании</a> </li>
+              <li class="nav__item"> <a class="nav__link" href="#events">Проведенные мероприятия</a> </li>
+              <li class="nav__item"> <a class="nav__link" href="#about">О компании</a> </li>
               <li class="nav__item"> <span class="nav__phone">+7 (495) 131-17-26</span> </li>
             </ul>
           </nav>
@@ -38,8 +38,9 @@
             <p class="hero__descr">Получите расчет кейтеринга прямо сейчас!</p>
             <div class="hero__form">
               <form action="" class="calculate">
-                <div class="calculate__field"> <input type="text" class="calculate__input" placeholder="Введите Имя" /> <input type="text" class="calculate__input" placeholder="Введите телефон" /> <input type="number" class="calculate__input" placeholder="Количество персон" /> </div>
-                <div class="calculate__field"> <button type="submit" class="calculate__submit" value="Receive a result of calculation">Получить расчет кейтеринга</button> </div>
+                <div class="calculate__field"> <input type="text" class="calculate__input" placeholder="Введите Имя" /> <input type="text" class="calculate__input" placeholder="Введите телефон" /> <input type="number" class="calculate__input calculate__input--number" placeholder="Количество персон"
+                  /> </div>
+                <div class="calculate__button-wrapper"> <button type="submit" class="calculate__submit" value="Receive a result of calculation">Получить расчет кейтеринга</button> </div>
               </form>
             </div>
           </div>
@@ -49,7 +50,7 @@
         <div class="container-inner features__container">
           <div class="features__feature">
             <div class="features__image"> <svg class="icon icon-debit-card"><use xlink:href="img/sprite.svg#icon-debit-card"></use></svg> </div>
-            <div class="features__text"> Лучшие цены <br/> на кейтеринг </div>
+            <div class="features__text"> Лучшие цены на кейтеринг </div>
           </div>
           <div class="features__feature">
             <div class="features__image"> <svg class="icon icon-menu"><use xlink:href="img/sprite.svg#icon-menu"></use></svg> </div>
@@ -110,7 +111,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__container container-inner">
           <h3 class="about__title title">О Компании Русский мир</h3>
           <div class="divider"> <svg class="icon icon-divider"><use xlink:href="img/sprite.svg#icon-divider"></use></svg> </div>
@@ -119,7 +120,7 @@
             празднику. </div>
         </div>
       </section>
-      <section class="events">
+      <section class="events" id="events">
         <div class="events__container container-inner">
           <h3 class="events__title title">Фото с мероприятий</h3>
           <div class="divider"> <svg class="icon icon-divider"><use xlink:href="img/sprite.svg#icon-divider"></use></svg> </div>
@@ -144,19 +145,29 @@
           <div class="divider"> <svg class="icon icon-divider"><use xlink:href="img/sprite.svg#icon-divider"></use></svg> </div>
           <div class="contacts__form">
             <form action="" class="order"> <label class="order__label">
-                    <i>
+                    <i class="order__input-icon">
 <svg class="icon icon-user"><use xlink:href="img/sprite.svg#icon-user"></use></svg>
 </i>
                     <input type="text" class="order__input" placeholder="Введите имя" />
-                </label> <label class="order__label order__label--center">
-                    <i>
+                </label> <label class="order__label">
+                    <i class="order__input-icon">
 <svg class="icon icon-call-answer"><use xlink:href="img/sprite.svg#icon-call-answer"></use></svg>
 </i>
-                    <input type="text" class="order__input" placeholder="Телефон или е-меил" />
+                    <input type="text" class="order__input order__input--long" placeholder="Телефон или е-меил" />
                 </label> <button type="submit" class="order__submit" value="Order catering">ЗАКАЗАТЬ КЕЙТЕРИНГ</button> </form>
           </div>
         </div>
       </div>
+      <footer class="footer" style="background-image: url('img/footer_bg.png')">
+        <div class="container-inner footer__container">
+          <div class="footer__logo">
+            <a href="page.html" class="logo logo--vert">
+              <div class="logo__img"> <img src="img/logo-dark.png" alt="main-logo" /> </div>
+              <h1 class="logo__text">Русский Мир</h1>
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

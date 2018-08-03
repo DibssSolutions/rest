@@ -5,12 +5,12 @@
         <div class="contacts__form">
             <form action="" class="order">
                 <label class="order__label">
-                    <i>{{mixins.icon('user')}}</i>
+                    <i class="order__input-icon">{{mixins.icon('user')}}</i>
                     <input type="text" class="order__input" placeholder="Введите имя" />
                 </label>
-                <label class="order__label order__label--center">
-                    <i>{{mixins.icon('call-answer')}}</i>
-                    <input type="text" class="order__input" placeholder="Телефон или е-меил" />
+                <label class="order__label">
+                    <i class="order__input-icon">{{mixins.icon('call-answer')}}</i>
+                    <input type="text" class="order__input order__input--long" placeholder="Телефон или е-меил" />
                 </label>
                 <button type="submit" class="order__submit" value="Order catering">ЗАКАЗАТЬ КЕЙТЕРИНГ</button>
             </form>
