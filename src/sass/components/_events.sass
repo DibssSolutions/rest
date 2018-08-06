@@ -1,14 +1,25 @@
 .events
+    &__title
+        margin-bottom: 40px
     &__photos
         margin: 0 -20px 0 -20px
         text-align: center
         +sm 
             margin: 0 auto
-    &__thumbnail
+    &__photo
         display: inline-block
-        margin: 0 20px 40px 20px
+        margin: 0 20px 30px 20px
+        overflow: hidden
         +sm 
-            margin: 0 auto 20px
+            margin: 0 auto 12px
+        &:hover
+            .events__thumbnail
+                transform: scale(1.1)
+                transition: transform 1s ease-out 
+                
+    &__thumbnail
+        transition: transform 1s ease-out 
+        
 
 .fancybox-image, 
 .fancybox-spaceball

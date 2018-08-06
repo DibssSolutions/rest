@@ -15,10 +15,12 @@ body
 	text-align: center
 	color: #141414
 	text-transform: uppercase
+	+sm 
+		font-size: 18px
 
 .divider
 	text-align: center
-	margin: 28px auto
+	margin: 22px auto
 .icon-divider
 	display: block
 	margin: 0 auto
@@ -26,4 +28,16 @@ body
 
 .out
 	overflow: hidden
-	// position: relative
+
+.message-sending
+	position: fixed
+	top: 20px
+	right: 20px
+	padding: 30px 40px
+	z-index: 100
+	background-color: transparentize($red, 0.3)
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.1)
+	display: none
+	font-size: 16px
+	border-radius: 5px
+	

@@ -55,8 +55,8 @@
             {% for items in catering | slice(2) %}
             <div class="catering__column">
                 {% for item in items %}
-                <div class="catering__item">
-                    <div class="catering__image {{item.height}}" style="background-image: url('img/foto_catering/{{item.image}}')"></div> 
+                <div class="catering__item {{item.height}}">
+                    <div class="catering__image" style="background-image: url('img/foto_catering/{{item.image}}')"></div>
                     <div class="catering__text-visible catering__text-visible--{{item.text_position}}">{{item.text_visible}}</div>
                     <div class="catering__text-hidden">{{item.text_hidden}}</div>
                 </div>

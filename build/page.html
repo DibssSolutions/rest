@@ -13,6 +13,8 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
+      <div class="js-success message-sending">Ваш запрос начал обрабатываться</div>
+      <div class="js-error message-sending"></div>
       <header class="header">
         <div class="container-inner header__container">
           <div class="header__logo">
@@ -43,9 +45,13 @@
             <p class="hero__descr">Получите расчет кейтеринга прямо сейчас!</p>
             <!-- FORM  -->
             <div class="hero__form">
-              <form action="" class="calculate">
-                <div class="calculate__field"> <input type="text" class="calculate__input" placeholder="Введите Имя" /> <input type="text" class="calculate__input" placeholder="Введите телефон" /> <input type="text" class="calculate__input" placeholder="Количество персон" /> </div>
-                <div class="calculate__button-wrapper"> <button type="submit" class="calculate__submit" value="Receive a result of calculation">Получить расчет кейтеринга</button> </div>
+              <form action="calculation_form.php" class="calculate js-calculate-form js-form" method="post">
+                <div class="calculate__field">
+                  <div class="calculate__input-group"> <input type="text" class="calculate__input" placeholder="Введите Имя" name="calculate-name" required /> </div>
+                  <div class="calculate__input-group"> <input type="text" class="calculate__input" placeholder="Введите телефон" name="calculate-phone" required /> </div>
+                  <div class="calculate__input-group"> <input type="text" class="calculate__input" placeholder="Количество персон" name="calculate-number" required /> </div>
+                </div>
+                <div class="calculate__button-wrapper"> <button type="submit" class="calculate__submit js-btn-submit" value="Receive a result of calculation" disabled>Получить расчет кейтеринга</button> </div>
               </form>
             </div>
           </div>
@@ -86,35 +92,35 @@
           <div class="catering__descr"> Компания Русский Мир организовывает кейтеринг и проводит мероприятия на самых различных лощадках. Мы подберем для вас самые креативные и концептуальные решения для вашего праздника </div>
           <div class="catering__options">
             <div class="catering__column">
-              <div class="catering__item">
-                <div class="catering__image image-big" style="background-image: url('img/foto_catering/11.jpg')"></div>
+              <div class="catering__item image-big">
+                <div class="catering__image" style="background-image: url('img/foto_catering/11.jpg')"></div>
                 <div class="catering__text-visible catering__text-visible--left-bottom">Кейтеринг на природе</div>
                 <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
               </div>
-              <div class="catering__item">
-                <div class="catering__image image-big" style="background-image: url('img/foto_catering/12.jpg')"></div>
+              <div class="catering__item image-big">
+                <div class="catering__image" style="background-image: url('img/foto_catering/12.jpg')"></div>
                 <div class="catering__text-visible catering__text-visible--right-bottom">Кейтеринг в лофте</div>
                 <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
               </div>
-              <div class="catering__item">
-                <div class="catering__image image-small" style="background-image: url('img/foto_catering/8.jpg')"></div>
+              <div class="catering__item image-small">
+                <div class="catering__image" style="background-image: url('img/foto_catering/8.jpg')"></div>
                 <div class="catering__text-visible catering__text-visible--left-bottom">Кейтеринг на празднике</div>
                 <div class="catering__text-hidden">Поможем в организации праздника и питания в любом удобном для вас месте. Креативные решения и индвидуальный подход!</div>
               </div>
             </div>
             <div class="catering__column">
-              <div class="catering__item">
-                <div class="catering__image image-middle" style="background-image: url('img/foto_catering/9.jpg')"></div>
+              <div class="catering__item image-middle">
+                <div class="catering__image" style="background-image: url('img/foto_catering/9.jpg')"></div>
                 <div class="catering__text-visible catering__text-visible--right-top">Кейтеринг и фуршеты на яхте</div>
                 <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
               </div>
-              <div class="catering__item">
-                <div class="catering__image image-middle" style="background-image: url('img/foto_catering/10.jpg')"></div>
+              <div class="catering__item image-middle">
+                <div class="catering__image" style="background-image: url('img/foto_catering/10.jpg')"></div>
                 <div class="catering__text-visible catering__text-visible--right-bottom">Кейтеринг на корабле</div>
                 <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
               </div>
-              <div class="catering__item">
-                <div class="catering__image image-middle" style="background-image: url('img/foto_catering/13.jpg')"></div>
+              <div class="catering__item image-middle">
+                <div class="catering__image" style="background-image: url('img/foto_catering/13.jpg')"></div>
                 <div class="catering__text-visible catering__text-visible--left-bottom">Организация питания на борту самолета</div>
                 <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
               </div>
@@ -126,7 +132,7 @@
         <div class="about__container container-inner">
           <h3 class="about__title title">О Компании Русский мир</h3>
           <div class="divider"> <svg class="icon icon-divider"><use xlink:href="img/sprite.svg#icon-divider"></use></svg> </div>
-          <div class="about__descr"> Компания Русский Мир оказывает услуги в сфере орагнизации кейтеринга и эвент мероприятий с 2011. За это время нами были проведены более 1200 мероприятий основная часть которых заключается в организации кейтеринга для празднования дня рождения
+          <div class="about__text"> Компания Русский Мир оказывает услуги в сфере орагнизации кейтеринга и эвент мероприятий с 2011. За это время нами были проведены более 1200 мероприятий основная часть которых заключается в организации кейтеринга для празднования дня рождения
             в Москве и области! Мы предлагаем полный комплекс организации кейтеринга (catering) от доставки еды и заканчивая полным спектром услуг под ключ. Каждому клиенту составляется индивидуальное предложение, которые будет соответствовать Вашему
             празднику. </div>
         </div>
@@ -134,20 +140,26 @@
       <section class="events" id="events">
         <div class="events__container container-inner">
           <h3 class="events__title title">Фото с мероприятий</h3>
-          <div class="divider"> <svg class="icon icon-divider"><use xlink:href="img/sprite.svg#icon-divider"></use></svg> </div>
-          <div class="events__photos"> <a href="img/foto_from_events/1_big.jpg" data-fancybox="images">
-                <img class="events__thumbnail" src="img/foto_from_events/1_small.jpg" />
-            </a> <a href="img/foto_from_events/2_big.jpg" data-fancybox="images">
-                <img class="events__thumbnail" src="img/foto_from_events/2_small.jpg" />
-            </a> <a href="img/foto_from_events/3_big.jpg" data-fancybox="images">
-                <img class="events__thumbnail" src="img/foto_from_events/3_small.jpg" />
-            </a> <a href="img/foto_from_events/4_big.jpg" data-fancybox="images">
-                <img class="events__thumbnail" src="img/foto_from_events/4_small.jpg" />
-            </a> <a href="img/foto_from_events/5_big.jpg" data-fancybox="images">
-                <img class="events__thumbnail" src="img/foto_from_events/5_small.jpg" />
-            </a> <a href="img/foto_from_events/6_big.jpg" data-fancybox="images">
-                <img class="events__thumbnail" src="img/foto_from_events/6_small.jpg" />
-            </a> </div>
+          <div class="events__photos">
+            <div class="events__photo"> <a href="img/foto_from_events/1_big.jpg" data-fancybox="images">
+                    <img class="events__thumbnail" src="img/foto_from_events/1_small.jpg"/>
+                </a> </div>
+            <div class="events__photo"> <a href="img/foto_from_events/2_big.jpg" data-fancybox="images">
+                    <img class="events__thumbnail" src="img/foto_from_events/2_small.jpg"/>
+                </a> </div>
+            <div class="events__photo"> <a href="img/foto_from_events/3_big.jpg" data-fancybox="images">
+                    <img class="events__thumbnail" src="img/foto_from_events/3_small.jpg"/>
+                </a> </div>
+            <div class="events__photo"> <a href="img/foto_from_events/4_big.jpg" data-fancybox="images">
+                    <img class="events__thumbnail" src="img/foto_from_events/4_small.jpg"/>
+                </a> </div>
+            <div class="events__photo"> <a href="img/foto_from_events/5_big.jpg" data-fancybox="images">
+                    <img class="events__thumbnail" src="img/foto_from_events/5_small.jpg"/>
+                </a> </div>
+            <div class="events__photo"> <a href="img/foto_from_events/6_big.jpg" data-fancybox="images">
+                    <img class="events__thumbnail" src="img/foto_from_events/6_small.jpg"/>
+                </a> </div>
+          </div>
         </div>
       </section>
       <div class="contacts">
@@ -155,24 +167,24 @@
           <h3 class="contacts__title title">Контакты - Русский мир</h3>
           <div class="divider"> <svg class="icon icon-divider"><use xlink:href="img/sprite.svg#icon-divider"></use></svg> </div>
           <div class="contacts__form">
-            <form action="" class="order"> <label class="order__label">
+            <form action="order_form.php" class="order js-order-form js-form" method="post"> <label class="order__label">
                     <i class="order__input-icon">
 <svg class="icon icon-user"><use xlink:href="img/sprite.svg#icon-user"></use></svg>
 </i>
-                    <input type="text" class="order__input" placeholder="Введите имя" />
+                    <input type="text" class="order__input" placeholder="Введите имя" name="order-name" required />
                 </label> <label class="order__label">
                     <i class="order__input-icon">
 <svg class="icon icon-call-answer"><use xlink:href="img/sprite.svg#icon-call-answer"></use></svg>
 </i>
-                    <input type="text" class="order__input order__input--long" placeholder="Телефон или е-меил" />
-                </label> <button type="submit" class="order__submit" value="Order catering">ЗАКАЗАТЬ КЕЙТЕРИНГ</button> </form>
+                    <input type="text" class="order__input order__input--long" placeholder="Телефон или е-меил" name="order-email" required />
+                </label> <button type="submit" class="order__submit js-btn-submit" value="Order catering" disabled>ЗАКАЗАТЬ КЕЙТЕРИНГ</button> </form>
           </div>
         </div>
       </div>
       <footer class="footer" style="background-image: url('img/footer_bg.png')">
         <div class="container-inner footer__container">
           <div class="footer__logo">
-            <a href="page.html" class="logo logo--vert">
+            <a href="page.html" class="logo logo--vert js-prevent-click prevented">
               <div class="logo__img"> <img src="img/logo-dark.png" alt="main-logo" /> </div>
               <h2 class="logo__text">Русский Мир</h2>
             </a>

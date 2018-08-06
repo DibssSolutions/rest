@@ -3,18 +3,17 @@
         <h3 class="contacts__title title">Контакты - Русский мир</h3>
         {% include "partials/_divider.html" %}
         <div class="contacts__form">
-            <form action="" class="order">
+            <form action="order_form.php" class="order js-order-form js-form" method="post">
                 <label class="order__label">
                     <i class="order__input-icon">{{mixins.icon('user')}}</i>
-                    <input type="text" class="order__input" placeholder="Введите имя" />
+                    <input type="text" class="order__input" placeholder="Введите имя" name="order-name" required />
                 </label>
                 <label class="order__label">
                     <i class="order__input-icon">{{mixins.icon('call-answer')}}</i>
-                    <input type="text" class="order__input order__input--long" placeholder="Телефон или е-меил" />
+                    <input type="text" class="order__input order__input--long" placeholder="Телефон или е-меил" name="order-email" required />
                 </label>
-                <button type="submit" class="order__submit" value="Order catering">ЗАКАЗАТЬ КЕЙТЕРИНГ</button>
+                <button type="submit" class="order__submit js-btn-submit" value="Order catering" disabled>ЗАКАЗАТЬ КЕЙТЕРИНГ</button>
             </form>
         </div>
     </div>
-
 </div>

@@ -9,14 +9,22 @@
             <p class="hero__descr">Получите расчет кейтеринга прямо сейчас!</p>
             <!-- FORM  -->
             <div class="hero__form">
-                <form action="" class="calculate">
+                <form action="calculation_form.php" class="calculate js-calculate-form js-form" method="post">
+                    
                     <div class="calculate__field">
-                        <input type="text" class="calculate__input" placeholder="Введите Имя" />
-                        <input type="text" class="calculate__input" placeholder="Введите телефон" />
-                        <input type="text" class="calculate__input" placeholder="Количество персон" />
+                        <div class="calculate__input-group">
+                            <input type="text" class="calculate__input" placeholder="Введите Имя" name="calculate-name" required />
+                        </div>
+                        <div class="calculate__input-group">
+                            <input type="text" class="calculate__input" placeholder="Введите телефон" name="calculate-phone" required />
+                        </div>
+                        <div class="calculate__input-group">
+                            <input type="text" class="calculate__input" placeholder="Количество персон" name="calculate-number" required />
+                        </div>
                     </div>
+
                     <div class="calculate__button-wrapper">
-                        <button type="submit" class="calculate__submit" value="Receive a result of calculation">Получить расчет кейтеринга</button>
+                        <button type="submit" class="calculate__submit js-btn-submit" value="Receive a result of calculation" disabled>Получить расчет кейтеринга</button>
                     </div>
                 </form>
             </div>

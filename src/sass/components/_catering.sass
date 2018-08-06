@@ -1,5 +1,7 @@
 .catering
     margin-bottom: 95px
+    +sm 
+        margin-bottom: 36px
     &__descr
         margin-bottom: 58px
         font-size: 16px
@@ -8,7 +10,7 @@
         text-align: center
         color: #090909
         font-style: italic
-
+        padding: 0 18px
 
     &__options 
         +clr
@@ -31,13 +33,14 @@
             margin-right: 0
         
     &__item
-        
         margin-bottom: 30px
         position: relative
+        display: table
+        overflow: hidden
         &:hover 
-            .catering__image 
-                opacity: 0.33
-                transition: opacity 0.5s
+            .catering__image
+                transform: scale(1.1)
+                transition: transform 1s ease-out
             .catering__text-hidden
                 opacity: 1
                 visibility: visible
@@ -49,7 +52,14 @@
                 transition: opacity 0.5s ease-out, visibility 0.5s ease-out
     &__image 
         +cover
-        transition: opacity 0.5s
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        transition: transform 1s ease-out
+        
     &__text
         &-visible
             position: absolute
@@ -73,27 +83,69 @@
             &--right-top
                 right: 0
                 top: 40px
+            +md 
+                font-size: 16px
+                padding: 6px 12px
+
         &-hidden
+            text-align: center
+            vertical-align: middle
+            display: table-cell
             opacity: 0
             visibility: hidden
-            +vcenter
             font-size: 20px
             line-height: 2.1
             text-align: center
             color: #000000
+            background-color: rgba(255,255,255,.7)
             width: 100%
-            padding: 0 60px 0
-            transition: opacity 0.5s ease-out, visibility 0.5s ease-out
-            
+            padding: 30px 60px 30px
+            transition: opacity 0.7s ease-out, visibility 0.7s ease-out
+            +md 
+                font-size: 16px
+                padding: 20px
 
 
 
+
+
+    // .image
+    //     &-big 
+    //         padding-bottom: 70%
+    //         // min-height: 70%
+    //     &-middle
+    //         padding-bottom: 60% 
+    //         // min-height: 60%
+    //     &-small 
+    //         padding-bottom: 40%
+    //         // min-height: 40%
 
     .image
         &-big 
-            padding-bottom: 70%
+            min-height: 375px
         &-middle
-            padding-bottom: 60% 
+            min-height: 325px
         &-small 
-            padding-bottom: 40%
+            min-height: 225px
+        +md 
+            &-big 
+                min-height: 250px
+            &-middle
+                min-height: 250px
+            &-small 
+                min-height: 250px
+        +sm 
+            // &-big 
+            //     min-height: 150px
+            // &-middle
+            //     min-height: 150px
+            // &-small 
+            //     min-height: 150px
+            &-big 
+                min-height: 40vh
+            &-middle
+                min-height: 40vh
+            &-small 
+                min-height: 40vh
+
 
