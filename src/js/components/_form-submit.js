@@ -22,15 +22,15 @@ $('.js-form').on('submit', e => {
     dataType: 'html',
     data: $(e.currentTarget).serialize(),
     success() {
-      // var form = $('.js-form');
       form.get(0).reset();
+      alert(333);
       var sentMessage = $('.js-success');
       sentMessage.fadeIn(1000);
       sentMessage.fadeOut(3000);
     },
     error: function(jqXHR, ajaxSettings, thrownError) {
       var errorSent = $('.js-error');
-
+      form.get(0).reset();
       errorSent.fadeIn(1000);
       errorSent.fadeOut(5000);
 

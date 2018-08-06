@@ -36,28 +36,19 @@ orderForm.validate({
   }
 });
 
-var calculateInput = $('.js-calculate-form input');
-var orderInput = $('.js-order-form input');
 var calculateSubmit = $('.js-calculate-form .js-btn-submit');
 var orderSubmit = $('.js-order-form .js-btn-submit');
 
-calculateInput.on('blur', function() {
-  if (calculateForm.valid()) {
-    calculateSubmit.prop('disabled', false);
-    calculateSubmit.removeClass('disabled');
-  } else {
-    calculateSubmit.prop('disabled', 'disabled');
-    calculateSubmit.addClass('disabled');
+calculateSubmit.on('click', function(e) {
+  calculateForm.valid();
+  if (!calculateForm.valid()) {
+    e.preventDefault();
   }
 });
 
-orderInput.on('blur', function() {
-  if (orderForm.valid()) {
-    orderSubmit.prop('disabled', false);
-    orderSubmit.removeClass('disabled');
-  } else {
-    orderSubmit.prop('disabled', 'disabled');
-    orderSubmit.addClass('disabled');
+orderSubmit.on('click', function(e) {
+  orderForm.valid();
+  if (!orderForm.valid()) {
+    e.preventDefault();
   }
 });
-
