@@ -1,5 +1,6 @@
 $('.js-toggle').click(function() {
+  
   $(this).toggleClass('on');
-  $('.nav').toggleClass('open');
-  $('.header').toggleClass('muted');
+  $('.js-nav').toggleClass('is-open');
+  $('.js-header').toggleClass('is-open');
 });

@@ -29,14 +29,18 @@
     
     &__column:first-child
         margin-right: 30px
+        overflow: hidden
         +sm 
             margin-right: 0
         
     &__item
         margin-bottom: 30px
         position: relative
-        display: table
+        // display: table
         overflow: hidden
+        // overflow-y: hidden
+        // overflow-x: hidden
+        // table-layout: fixed
         &:hover 
             .catering__image
                 transform: scale(1.1)
@@ -50,6 +54,10 @@
                 opacity: 0
                 visibility: hidden
                 transition: opacity 0.5s ease-out, visibility 0.5s ease-out
+    &__item-wrapper
+        display: table
+        width: 100%
+        height: 100%
     &__image 
         +cover
         position: absolute
@@ -59,6 +67,8 @@
         height: 100%
         z-index: -1
         transition: transform 1s ease-out
+        overflow: auto
+        
         
     &__text
         &-visible
@@ -122,18 +132,18 @@
 
     .image
         &-big 
-            min-height: 375px
+            height: 375px
         &-middle
-            min-height: 325px
+            height: 325px
         &-small 
-            min-height: 225px
+            height: 225px
         +md 
             &-big 
-                min-height: 250px
+                height: 250px
             &-middle
-                min-height: 250px
+                height: 250px
             &-small 
-                min-height: 250px
+                height: 250px
         +sm 
             // &-big 
             //     min-height: 150px
@@ -142,10 +152,10 @@
             // &-small 
             //     min-height: 150px
             &-big 
-                min-height: 40vh
+                height: 40vh
             &-middle
-                min-height: 40vh
+                height: 40vh
             &-small 
-                min-height: 40vh
+                height: 40vh
 
 

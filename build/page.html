@@ -15,7 +15,7 @@
     <div class="out">
       <div class="js-success message-sending">Ваш запрос начал обрабатываться</div>
       <div class="js-error message-sending"></div>
-      <header class="header">
+      <header class="header js-header">
         <div class="container-inner header__container">
           <div class="header__logo">
             <a href="page.html" class="logo">
@@ -23,7 +23,7 @@
               <h1 class="logo__text">Русский Мир</h1>
             </a>
           </div>
-          <nav class="nav" role="navigation">
+          <nav class="nav js-nav" role="navigation">
             <ul class="nav__list">
               <li class="nav__item d-md-none d-sm-block"> <a class="nav__link" href="#events">Проведенные мероприятия</a> </li>
               <li class="nav__item d-md-none d-sm-block"> <a class="nav__link" href="#about">О компании</a> </li>
@@ -36,7 +36,7 @@
         </a> </div>
       </header>
       <div class="hero">
-        <div class="hero__video js-video"> </div>
+        <div class="hero__video js-video" data-vide-bg="mp4: video/demo, poster: video/poster" data-vide-options="posterType: jpg, loop: true"> </div>
         <div class="hero__container">
           <div class="hero__text">
             <!-- TITLE -->
@@ -93,36 +93,48 @@
           <div class="catering__options">
             <div class="catering__column">
               <div class="catering__item image-big">
-                <div class="catering__image" style="background-image: url('img/foto_catering/11.jpg')"></div>
-                <div class="catering__text-visible catering__text-visible--left-bottom">Кейтеринг на природе</div>
-                <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+                <div class="catering__item-wrapper">
+                  <div class="catering__image" style="background-image: url('img/foto_catering/11.jpg')"></div>
+                  <div class="catering__text-visible catering__text-visible--left-bottom">Кейтеринг на природе</div>
+                  <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+                </div>
               </div>
               <div class="catering__item image-big">
-                <div class="catering__image" style="background-image: url('img/foto_catering/12.jpg')"></div>
-                <div class="catering__text-visible catering__text-visible--right-bottom">Кейтеринг в лофте</div>
-                <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+                <div class="catering__item-wrapper">
+                  <div class="catering__image" style="background-image: url('img/foto_catering/12.jpg')"></div>
+                  <div class="catering__text-visible catering__text-visible--right-bottom">Кейтеринг в лофте</div>
+                  <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+                </div>
               </div>
               <div class="catering__item image-small">
-                <div class="catering__image" style="background-image: url('img/foto_catering/8.jpg')"></div>
-                <div class="catering__text-visible catering__text-visible--left-bottom">Кейтеринг на празднике</div>
-                <div class="catering__text-hidden">Поможем в организации праздника и питания в любом удобном для вас месте. Креативные решения и индвидуальный подход!</div>
+                <div class="catering__item-wrapper">
+                  <div class="catering__image" style="background-image: url('img/foto_catering/8.jpg')"></div>
+                  <div class="catering__text-visible catering__text-visible--left-bottom">Кейтеринг на празднике</div>
+                  <div class="catering__text-hidden">Поможем в организации праздника и питания в любом удобном для вас месте. Креативные решения и индвидуальный подход!</div>
+                </div>
               </div>
             </div>
             <div class="catering__column">
               <div class="catering__item image-middle">
-                <div class="catering__image" style="background-image: url('img/foto_catering/9.jpg')"></div>
-                <div class="catering__text-visible catering__text-visible--right-top">Кейтеринг и фуршеты на яхте</div>
-                <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+                <div class="catering__item-wrapper">
+                  <div class="catering__image" style="background-image: url('img/foto_catering/9.jpg')"></div>
+                  <div class="catering__text-visible catering__text-visible--right-top">Кейтеринг и фуршеты на яхте</div>
+                  <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+                </div>
               </div>
               <div class="catering__item image-middle">
-                <div class="catering__image" style="background-image: url('img/foto_catering/10.jpg')"></div>
-                <div class="catering__text-visible catering__text-visible--right-bottom">Кейтеринг на корабле</div>
-                <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+                <div class="catering__item-wrapper">
+                  <div class="catering__image" style="background-image: url('img/foto_catering/10.jpg')"></div>
+                  <div class="catering__text-visible catering__text-visible--right-bottom">Кейтеринг на корабле</div>
+                  <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+                </div>
               </div>
               <div class="catering__item image-middle">
-                <div class="catering__image" style="background-image: url('img/foto_catering/13.jpg')"></div>
-                <div class="catering__text-visible catering__text-visible--left-bottom">Организация питания на борту самолета</div>
-                <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+                <div class="catering__item-wrapper">
+                  <div class="catering__image" style="background-image: url('img/foto_catering/13.jpg')"></div>
+                  <div class="catering__text-visible catering__text-visible--left-bottom">Организация питания на борту самолета</div>
+                  <div class="catering__text-hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi omnis molestiae adipisci repellendus quidem exercitationem.</div>
+                </div>
               </div>
             </div>
           </div>

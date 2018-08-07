@@ -1,61 +1,4 @@
-// ===== CONTACTS FORM =====
-
-.order
-    text-align: center
-    &__label
-        position: relative
-        display: inline-block
-        min-width: 270px
-        margin: 16px 16px 0
-        text-align: center
-        border: solid 1px $grey
-        border-radius: 23px
-        padding: 11px 23px
-    &__input-icon
-        margin-right: 10px
-        display: inline-block
-        .icon
-            font-size: 0.8em
-            color: $grey
-    &__input    
-        display: inline-block
-        font-size: 14px
-        font-weight: 300
-        line-height: 1.21
-        color: #666666
-        +text-overflow
-        width: 45%
-        &--long 
-            width: 70%
-        &::placeholder
-            font-size: inherit
-            font-weight:inherit
-            line-height: inherit
-            color: inherit
-    &__submit
-        display: inline-block
-        padding: 14px 0
-        font-size: 16px
-        line-height: 1.31
-        color: #ffffff
-        background-color: $red
-        min-width: 270px
-        border-radius: 23px
-        text-align: center
-        text-transform: uppercase
-        margin: 16px 16px 0
-        &:disabled
-            cursor: default
-        &.disabled 
-            opacity: 0.5
-    label.error
-        position: absolute
-        top: 100%
-        left: 15px
-        // +sm 
-        //     display: block
-        //     width: 100%
-        //     margin: 16px 0 0
+// ===== HERO FORM =====
 
 .calculate
     &__field
@@ -91,9 +34,9 @@
             line-height: inherit
             color: inherit
         &:focus
-            border-bottom-color: #141414
+            border-bottom-color: rgba(#fff, 0.7)
         &.error
-            color: $red
+            color: rgba(#fff, 0.7)
         +sm 
             border-bottom-width: 1px
     label.error
@@ -121,10 +64,76 @@
         +sm 
             font-size: 14px
             padding: 14px 0
-            width: 100%
+            width: 100% 
+    
+    
+// ===== CONTACTS FORM =====
 
-input.error
-    color: red
+.order
+    text-align: center
+    &__label
+        position: relative
+        display: inline-block
+        min-width: 270px
+        margin: 16px 16px 0
+        text-align: center
+        border: solid 1px $grey
+        border-radius: 23px
+        padding: 11px 23px
+        +sm 
+            margin-bottom: 6px
+    &__input-icon
+        margin-right: 10px
+        display: inline-block
+        .icon
+            font-size: 0.8em
+            color: $grey
+    &__input    
+        display: inline-block
+        font-size: 14px
+        font-weight: 300
+        line-height: 1.21
+        color: #666666
+        +text-overflow
+        width: 45%
+        &.error
+            color: rgba(#666666, 0.7)
+        &--long 
+            width: 70%
+        &::placeholder
+            font-size: inherit
+            font-weight:inherit
+            line-height: inherit
+            color: inherit
+    &__submit
+        display: inline-block
+        padding: 14px 0
+        font-size: 16px
+        line-height: 1.31
+        color: #ffffff
+        background-color: $red
+        min-width: 270px
+        border-radius: 23px
+        text-align: center
+        text-transform: uppercase
+        margin: 16px 16px 0
+        &:disabled
+            cursor: default
+        &.disabled 
+            opacity: 0.5
+    label.error
+        position: absolute
+        top: 100%
+        left: 15px
+        // +sm 
+        //     display: block
+        //     width: 100%
+        //     margin: 16px 0 0
+
+
+
+// input.error
+//     color: rgba(#fff, 0.7)
 
 label.error
     position: absolute

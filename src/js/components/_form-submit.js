@@ -23,7 +23,6 @@ $('.js-form').on('submit', e => {
     data: $(e.currentTarget).serialize(),
     success() {
       form.get(0).reset();
-      alert(333);
       var sentMessage = $('.js-success');
       sentMessage.fadeIn(1000);
       sentMessage.fadeOut(3000);

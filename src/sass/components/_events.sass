@@ -12,6 +12,7 @@
         overflow: hidden
         +sm 
             margin: 0 auto 12px
+            width: 100%
         &:hover
             .events__thumbnail
                 transform: scale(1.1)
@@ -19,6 +20,9 @@
                 
     &__thumbnail
         transition: transform 1s ease-out 
+        display: block
+        +sm 
+            width: 100%
         
 
 .fancybox-image, 
