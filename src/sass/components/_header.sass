@@ -9,11 +9,6 @@
         padding-top: 36px
     +sm 
         padding-top: 8px
-        transition: background-color 0.7s
-    &.is-open
-        +sm 
-            background-color: rgba(#000, 0.7)
-            transition: background-color 0.7s
     &__container
         display: flex
         align-items: center
@@ -22,21 +17,22 @@
     &__logo
         margin-right: auto
     
-        
-
 .nav
     position: relative
     +sm
         visibility: hidden
         opacity: 0
         position: absolute
-        top: 63px
+        top: 0
         left: 0
         right: 0
         width: 100%
+        padding-top: 63px
         text-transform: uppercase
         background-color: rgba(#000, 0.7)
         transition: opacity 0.7s, visibility 0.7s
+        z-index: -1
+
         
     &.is-open
         +sm
@@ -53,8 +49,15 @@
     &__item
         color: #fff
         margin-left: 50px
+        &:first-child
+            margin-left: 0
         +sm 
             margin: 16px auto
+            &:first-child
+                margin: 16px auto
+
+  
+        
     &__link
         font-size: 16px
         font-weight: 300
