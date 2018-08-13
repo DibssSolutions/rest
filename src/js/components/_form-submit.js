@@ -4,9 +4,6 @@ $('.js-form').on('submit', e => {
   var form = $(e.currentTarget);
   var input = $(form).find('input');
 
-  // input.each(function(el) {
-  //   if (el.value === '') return false;
-  // });
 
   var urlPhpFile;
 
@@ -25,29 +22,33 @@ $('.js-form').on('submit', e => {
       form.get(0).reset();
       var sentMessage = $('.js-success');
       sentMessage.fadeIn(1000);
-      sentMessage.fadeOut(3000);
+      // sentMessage.fadeOut(5000);
     },
     error: function(jqXHR, ajaxSettings, thrownError) {
       var errorSent = $('.js-error');
       form.get(0).reset();
       errorSent.fadeIn(1000);
-      errorSent.fadeOut(5000);
+      // errorSent.fadeOut(5000);
+      var closeBtn =
+        '<button class="message-sending__x js-close">&#10006;</button>';
 
       if (jqXHR.status === 0) {
-        errorSent.text('Not connect.\n Verify Network.');
+        errorSent.html('Not connect.\n Verify Network.' + closeBtn);
       } else if (jqXHR.status === 404) {
-        errorSent.text('Requested page not found. 404');
+        errorSent.html('Requested page not found. 404' + closeBtn);
       } else if (jqXHR.status === 500) {
-        errorSent.text('Internal Server Error 500.');
+        errorSent.html('Internal Server Error 500.' + closeBtn);
       } else if (exception === 'parsererror') {
-        errorSent.text('Requested JSON parse failed.');
+        errorSent.html('Requested JSON parse failed.' + closeBtn);
       } else if (exception === 'timeout') {
-        errorSent.text('Превышено время отправки сообщения');
+        errorSent.html('Превышено время отправки сообщения' + closeBtn);
       } else if (exception === 'abort') {
-        errorSent.text('Ajax request aborted.');
+        errorSent.html('Ajax request aborted.' + closeBtn);
       } else {
-        errorSent.text('Uncaught Error.\n' + jqXHR.responseText);
+        errorSent.html('Uncaught Error.\n' + jqXHR.responseText + closeBtn);
       }
     }
   });
+
+
 });
