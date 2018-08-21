@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Index page</title>
+    <title>Catering | Moscow</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -18,7 +18,7 @@
       <header class="header js-header">
         <div class="container-inner header__container">
           <div class="header__logo">
-            <a href="page.html" class="logo">
+            <a href="index.html" class="logo">
               <div class="logo__img"> <img src="img/logo.png" alt="main-logo" /> </div>
               <h1 class="logo__text">Русский Мир</h1>
             </a>
@@ -27,7 +27,7 @@
             <ul class="nav__list">
               <li class="nav__item d-md-none d-sm-block"> <a class="nav__link" href="#events">Проведенные мероприятия</a> </li>
               <li class="nav__item d-md-none d-sm-block"> <a class="nav__link" href="#about">О компании</a> </li>
-              <li class="nav__item"> <span class="nav__phone">+7 (495) 131-17-26</span> <a href="mailto:welcom@catering-moscow.ru" class="nav__email">welcom@catering-moscow.ru</a> </li>
+              <li class="nav__item"> <a href="tel:+74956644322" class="nav__phone">+7 (495) 664-43-22</a> <a href="mailto:welcom@catering-moscow.ru" class="nav__email">welcom@catering-moscow.ru</a> </li>
             </ul>
           </nav> <a href="#" class="toggle-button js-toggle">
             <span></span>
@@ -48,7 +48,7 @@
               <form action="calculation_form.php" class="calculate js-calculate-form js-form" method="post">
                 <div class="calculate__field">
                   <div class="calculate__input-group"> <input type="text" class="calculate__input" placeholder="Введите Имя" name="calculate-name" required /> </div>
-                  <div class="calculate__input-group"> <input type="text" class="calculate__input" placeholder="Введите телефон" name="calculate-phone" required /> </div>
+                  <div class="calculate__input-group"> <input type="text" class="calculate__input js-phone-mask" placeholder="Введите телефон" name="calculate-phone" required /> </div>
                   <div class="calculate__input-group"> <input type="text" class="calculate__input" placeholder="Количество персон" name="calculate-number" /> </div>
                 </div>
                 <div class="calculate__button-wrapper"> <button type="submit" class="calculate__submit js-btn-submit" value="Receive a result of calculation">Получить расчет кейтеринга</button> </div>
@@ -177,7 +177,8 @@
       <div class="contacts">
         <div class="contacts__container container-inner">
           <h3 class="contacts__title title">Контакты - Русский мир</h3>
-          <div class="divider"> <svg class="icon icon-divider"><use xlink:href="img/sprite.svg#icon-divider"></use></svg> </div>
+          <div class="divider"> <svg class="icon icon-divider"><use xlink:href="img/sprite.svg#icon-divider"></use></svg> </div> <a href="tel:+74956644322" class="contacts__phone">+7 (495) 664-43-22</a> <a href="mailto:welcom@catering-moscow.ru" class="contacts__email">welcom@catering-moscow.ru</a>
+          <div class="contacts__text">Если вы хотите, чтобы мы вам перезвонили, заполните форму ниже, и менеджер свяжется с вами в течении 5 минут!</div>
           <div class="contacts__form">
             <form action="order_form.php" class="order js-order-form js-form" method="post"> <label class="order__label">
                     <i class="order__input-icon">
@@ -193,15 +194,16 @@
           </div>
         </div>
       </div>
-      <footer class="footer" style="background-image: url('img/footer_bg.png')">
+      <footer class="footer">
         <div class="container-inner footer__container">
           <div class="footer__logo">
-            <a href="page.html" class="logo logo--vert js-prevent-click prevented">
+            <a href="index.html" class="logo logo--vert js-prevent-click prevented">
               <div class="logo__img"> <img src="img/logo-dark.png" alt="main-logo" /> </div>
               <h2 class="logo__text">Русский Мир</h2>
             </a>
           </div>
         </div>
+        <div class="footer__bg" style="background-image: url('img/footer_bg.png')"></div>
       </footer>
     </div>
     <!-- END content -->

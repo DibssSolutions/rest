@@ -6,3 +6,4 @@ import './components/_form-validation';
 import './components/_form-submit';
 import './components/_prevent-click';
 import './components/_closeModal';
+import './components/_mask';

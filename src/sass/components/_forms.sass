@@ -27,6 +27,7 @@
         color: #ffffff 
         padding: 4px 0
         border-bottom: 3px solid #fff
+        
         &::placeholder
             background-color: inherit
             font-size: inherit
@@ -35,6 +36,8 @@
             color: inherit
         &:focus
             border-bottom-color: rgba(#fff, 0.7)
+            &::placeholder
+                font-size: 0
         &.error
             color: rgba(#fff, 0.7)
         +sm 
@@ -96,6 +99,9 @@
         color: #666666
         +text-overflow
         width: 45%
+        &:focus
+            &::placeholder
+                font-size: 0
         &.error
             color: rgba(#666666, 0.7)
         &--long 

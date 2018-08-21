@@ -1,13 +1,16 @@
 .footer
-    padding-bottom: 203px 
-    background-size: contain
-    background-position: center bottom
-    background-repeat: no-repeat
     text-align: center
+    &__bg
+        padding-bottom: 203px
+        background-size: contain
+        background-position: center bottom
+        background-repeat: repeat-x
+        +md 
+            padding-bottom: 130px
+        +sm
+            padding-bottom: 70px 
     &__logo
+        
         margin-bottom: 10px
         display: inline-block
-    +md 
-        padding-bottom: 130px
-    +sm
-        padding-bottom: 70px 
+
