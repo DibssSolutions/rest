@@ -5,4 +5,5 @@ $(document).ready(function() {
   if (container && container.paused) {
     container.play();
   }
+  $(container).attr('playsinline','');
 });
